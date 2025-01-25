@@ -13,6 +13,7 @@ provider "azurerm" {
   }
 }
 # ganesh varma
+# testing the pull request
 resource "azurerm_resource_group" "appgrp" {
   name     = "app-grp"
   location = "North Europe"
