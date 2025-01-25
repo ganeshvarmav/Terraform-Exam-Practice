@@ -12,7 +12,7 @@ provider "azurerm" {
   features {
     
   }
-  subscription_id = "eeb9f46b-453d-4862-b157-074f0da937c3"
+  
 }
 
 resource "azurerm_resource_group" "appgrp" {
