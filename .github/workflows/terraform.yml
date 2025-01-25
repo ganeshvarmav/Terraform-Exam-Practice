@@ -1,9 +1,9 @@
 name: Terraform Workflow
 
 on:
-  push:
+  push:  # Trigger 'terraform plan' on any push to any branch
     branches:
-      - main  # Trigger 'terraform plan' on push to 'main'
+      - '**'  # Matches all branches
 
   pull_request:
     branches:
@@ -35,7 +35,7 @@ jobs:
 
   terraform-apply:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true }}  # Apply only when PR is merged
+    if: ${{ github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true }}  # Only run when PR is merged
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
