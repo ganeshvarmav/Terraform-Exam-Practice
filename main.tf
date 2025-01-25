@@ -9,10 +9,8 @@ terraform {
 
 provider "azurerm" {
   #Configuration options
-  features {
-    
+  features { 
   }
-  
 }
 
 resource "azurerm_resource_group" "appgrp" {
