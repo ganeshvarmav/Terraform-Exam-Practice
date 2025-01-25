@@ -6,7 +6,7 @@ required_providers {
   }
 }
 }
-
+# ganesh varma
 provider "azurerm" {
     features {
       
